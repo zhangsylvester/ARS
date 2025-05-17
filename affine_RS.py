@@ -11,7 +11,8 @@ class GrowthDiagram:
     def __init__(self, w):
         if not isinstance(w, affine_permutation) :
             raise TypeError("Input must be an affine permutation.")
-        self.w = w.entries
+        self.w = w
+        L = w.entries
         self.L = L
         self.n = len(L)
         # check affine permutation
