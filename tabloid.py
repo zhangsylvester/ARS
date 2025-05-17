@@ -1,4 +1,3 @@
-
 class Tabloid:
     def __init__(self, rows):
         # rows: list of lists of integers
@@ -86,6 +85,8 @@ class skew_tableau:
 def tabloid_to_skew(T, mu):
     """Convert Tabloid to skew_tableau using its rows."""
     return skew_tableau(mu, T.rows)
+def skew_to_tabloid(S):
+    return Tabloid(S.rows())
 
 class standard_skew_tableau(skew_tableau):
     def __init__(self, mu, rows):
