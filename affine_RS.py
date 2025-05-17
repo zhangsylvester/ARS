@@ -444,7 +444,7 @@ class GrowthDiagram:
         maxlab = max((v for v in L_trunc if v), default=0)
         return [L_trunc.count(i) for i in range(1, maxlab+1)]
 
-    def affine_RS(self, display_output=True): # Renamed display to display_output for clarity
+    def affine_RS(self, display_output=False): # Renamed display to display_output for clarity
         if not self.seg_color and not self.color_list: # Ensure coloring is done if needed
             self.auto_color_left_sequence()
         P = self.P_tabloid()
