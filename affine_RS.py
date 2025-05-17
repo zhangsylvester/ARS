@@ -453,7 +453,8 @@ class GrowthDiagram:
         if display_output: # Only print if called directly, not from web app
             self.display_P_tabloid()
             self.display_Q_tabloid()
-        k = (sum(lam) + self.w.index())/(self.n) + 1
+        N = self.n
+        k = (sum(lam) + self.w.index())/N + 1
         return P, Q, lam, int(k)
 
 def run_app(evt=None):
